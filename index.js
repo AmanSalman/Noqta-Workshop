@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    return res.json({message:'Hello World!'})
 })
 
 app.get('/api/products', (req, res) => {
