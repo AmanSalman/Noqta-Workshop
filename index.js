@@ -12,6 +12,6 @@ app.get('/', (req, res) => {
 app.get('/api/products', (req, res) => {
     res.json({message:"success", products})
 })
-app.listen(3000, () => {
+app.listen(3000 || process.env.PORT, () => {
     console.log('Example app listening on port 3000!')
 })
