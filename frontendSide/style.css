@@ -1,0 +1,204 @@
+/* Body and Global Styles */
+
+*,p{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  /* background-color:#DDB4D8; */
+  background-color: #4A4E69;
+}
+
+.navbar, .navbar .nav-link {
+  color: #ffffff !important;
+  font-family: "Host Grotesk", sans-serif;
+}
+
+.nav-link{
+  font-size: 1.1rem;
+}
+.nav-link:hover{
+  color: #DDB4D8 !important;
+}
+.navbar-nav {
+  gap: 4rem;
+}
+
+.navbar-brand{
+  font-family: "Dancing Script", serif;
+  font-size: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('./pexels-n-voitkevich-6214388.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  font-family: "Dancing Script", serif;
+  font-weight: 500;
+}
+
+.hero-section p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Host Grotesk", sans-serif;
+}
+
+/* Main Product Container */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #DDB4D8;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #DDB4D8 !important;
+  color: #fff !important;
+}
+
+
+.typing {
+  font-size: 1.5rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid black;
+  animation: typing 4s steps(40) 1s infinite normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
