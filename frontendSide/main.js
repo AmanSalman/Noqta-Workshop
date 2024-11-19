@@ -1,8 +1,7 @@
+const apiURL = "http://localhost:3000/api/products";
+
 document.addEventListener("DOMContentLoaded", () => {
   const productContainer = document.getElementById("product-container");
-
-  // Replace with your API endpoint
-  const apiURL = "http://localhost:3000/api/products";
 
   // Fetch data using Axios
   axios
