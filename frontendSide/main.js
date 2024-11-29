@@ -2,18 +2,11 @@ const apiURL = "http://localhost:3000/api/products";
 
 document.addEventListener("DOMContentLoaded", () => {
   const productContainer = document.getElementById("product-container");
-
-  // Fetch data using Axios
-  axios
-    .get(apiURL)
-    .then(response => {
-      const products = response.data.products; // Assuming the API returns an array of products
-
-      // Loop through the products and create product cards
+  axios.get(apiURL).then(response => {
+      const products = response.data.products;
       products.forEach(product => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
-
         productCard.innerHTML = `
           <img src="${product.image}" alt="${product.name}">
           <div class="flex-dev">
@@ -22,11 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="btn">Buy Now</button>
           </div>
         `;
-
         productContainer.appendChild(productCard);
       });
-    })
-    .catch(error => {
+    }).catch(error => {
       console.error("Error fetching products:", error);
       productContainer.innerHTML = `<p>Error loading products. Please try again later.</p>`;
     });
