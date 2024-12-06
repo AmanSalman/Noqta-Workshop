@@ -19,5 +19,8 @@ A simple web application developed during the **Backend Workshop**. The project 
 - **Backend**: Node.js, Express.js.
 - **External API**: Used to fetch product data.
 - **Version Control**: GitHub for managing the project.
-
+- 
+## Additional Resources 📚
+- [Workshop Slides](https://drive.google.com/drive/folders/1BvxHqgijExU6zRb128mpjj2A3yj7Fvgf?usp=sharing)
+- [Session Video](https://drive.google.com/file/d/19rX9p_CMcfu5lnZd0DgBqnhBYsFEhDNR/view)
 
